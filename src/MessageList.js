@@ -3,7 +3,7 @@ import {
   ListView,
   ListViewSection,
   ListViewSectionHeader,
-  ListviewRow,
+  ListViewRow,
   Text
 } from 'react-desktop/macOs'
 
@@ -12,9 +12,8 @@ class MessageList extends Component {
     return (
       <ListView>
         <ListViewSection>
-          {this.props.messages.map((message, index) => {
-            this.renderItem(message)
-          })}
+          {this.props.messages.map((message, index) => this.renderItem(message)
+          )}
         </ListViewSection>
       </ListView>
     )
@@ -22,11 +21,11 @@ class MessageList extends Component {
 
   renderItem(message) {
     return (
-      <ListviewRow key={message.id}>
+      <ListViewRow key={message.id}>
         <Text color="#414141" size="13">
           {message.text}
         </Text>
-      </ListviewRow>
+      </ListViewRow>
     )
   }
 }
