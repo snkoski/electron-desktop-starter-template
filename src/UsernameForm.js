@@ -21,7 +21,7 @@ class UsernameForm extends Component {
 
   render() {
     return (
-      <div calssName="username-form">
+      <div className="username-form">
         <form onSubmit={this.handleSubmit}>
           <div>
             <TextInput
